@@ -28,3 +28,18 @@ const App: React.FC = () => {
 
     return () => clearInterval(typingInterval);
   }, []);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+      setTimeout(() => setIsLoaded(true), 100);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    const roleInterval = setInterval(() => {
+      setCurrentRole(prev => (prev + 1) % roles.length);
+    }, 3000);
+    return () => clearInterval(roleInterval);
+  }, []);
