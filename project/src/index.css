@@ -425,3 +425,10 @@ button:hover .nav-text-stroke {
     transform: rotate(360deg);
   }
 }
+.glowing span {
+  position: absolute;
+  top: calc(80px * var(--i));
+  left: calc(80px * var(--i));
+  bottom: calc(80px * var(--i));
+  right: calc(80px * var(--i));
+}
