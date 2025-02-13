@@ -25,3 +25,31 @@
   background-repeat: no-repeat;
   animation: l11 1.5s infinite;
 }
+@keyframes l11 {
+  0% { background-size: 35px 15px, 15px 15px, 15px 35px, 35px 35px; }
+  25% { background-size: 35px 35px, 15px 35px, 15px 15px, 35px 15px; }
+  50% { background-size: 15px 35px, 35px 35px, 35px 15px, 15px 15px; }
+  75% { background-size: 15px 15px, 35px 15px, 35px 35px, 15px 35px; }
+  100% { background-size: 35px 15px, 15px 15px, 15px 35px, 35px 35px; }
+}
+
+.nav-text-stroke {
+  -webkit-text-stroke: 1px black;
+  color: transparent;
+  transition: color 0.3s ease;
+}
+
+button:hover .nav-text-stroke {
+  color: black;
+  -webkit-text-stroke: 0;
+}
+
+.developer-scene {
+  position: relative;
+  width: 280px;
+  height: 140px;
+  margin: 0 auto;
+  filter: blur(0.5px);
+  animation: floatScene 6s ease-in-out infinite;
+  transform-origin: left center;
+}
