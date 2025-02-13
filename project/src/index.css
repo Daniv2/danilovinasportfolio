@@ -226,3 +226,26 @@ button:hover .nav-text-stroke {
   color: transparent;
   position: relative;
 }
+.text-stroke::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.2),
+    transparent 70%
+  );
+  background-size: 200% 200%;
+  animation: reflectionSweep 3s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes reflectionSweep {
+  0% {
+    background-position: -200% -200%;
+  }
+  100% {
+    background-position: 200% 200%;
+  }
+}
