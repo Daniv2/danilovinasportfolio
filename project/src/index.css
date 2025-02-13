@@ -260,3 +260,32 @@ button:hover .nav-text-stroke {
 .nav-link {
   position: relative;
 }
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: black;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.social-link {
+  position: relative;
+  padding: 6px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 640px) {
+  .social-link {
+    padding: 8px;
+  }
+}
