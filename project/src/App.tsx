@@ -43,3 +43,27 @@ const App: React.FC = () => {
     }, 3000);
     return () => clearInterval(roleInterval);
   }, []);
+
+  const scrollToTop = () => {
+    scrollContainerRef.current?.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  const roles = [
+    "Junior Frontend Developer",
+    "UI/UX Designer",
+    "Video Editor",
+    "Social Media Manager",
+    "Web Developer"
+  ];
+
+  const stats = [
+    { icon: <Briefcase className="w-8 h-8" />, label: "Total Projects", value: "5" },
+    { icon: <Award className="w-8 h-8" />, label: "Certificate", value: "1" },
+    { icon: <Clock className="w-8 h-8" />, label: "Years of Experience", value: "3" }
+  ];
+
+};
+export default App;
