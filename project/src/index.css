@@ -150,3 +150,40 @@ button:hover .nav-text-stroke {
     transform: translateY(-5px);
   }
 }
+.tech-logo {
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+  position: relative;
+  transform: none;
+  z-index: 4;
+  filter: blur(0.5px) brightness(0.95);
+}
+
+@keyframes showLogo {
+  0% {
+    opacity: 0;
+    filter: blur(2px) brightness(0.9);
+    transform: translateY(5px);
+  }
+  3% {
+    opacity: 1;
+    filter: blur(0.5px) brightness(0.95);
+    transform: translateY(0);
+  }
+  30% {
+    opacity: 1;
+    filter: blur(0.5px) brightness(0.95);
+    transform: translateY(0);
+  }
+  33% {
+    opacity: 0;
+    filter: blur(2px) brightness(0.9);
+    transform: translateY(-5px);
+  }
+  100% {
+    opacity: 0;
+    filter: blur(2px) brightness(0.9);
+    transform: translateY(-5px);
+  }
+}
