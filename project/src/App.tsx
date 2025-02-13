@@ -138,6 +138,113 @@ const App: React.FC = () => {
     );
   }
 
+  return (
+    <div className="min-h-screen bg-white text-black">
+      <header className={`fixed w-full z-40 transition-all duration-300 ${
+        isScrolled ? 'bg-white/90 backdrop-blur-sm shadow-sm' : 'bg-transparent'
+      }`}>
+        <nav className="container mx-auto px-2 sm:px-4 max-w-[2000px]">
+          <div className="flex justify-between items-center py-3 sm:py-4">
+            <button onClick={scrollToTop} className="flex items-center space-x-2 group">
+              <span className="text-xl sm:text-2xl font-bold tracking-tighter">
+                <span className="nav-text-stroke">DANILO</span>
+                <span className="ml-2">VINAS</span>
+              </span>
+            </button>
+            <div className="flex space-x-4 sm:space-x-8">
+              <a href="#work" className="nav-link text-xs sm:text-sm uppercase tracking-widest">Work</a>
+              <a href="#about" className="nav-link text-xs sm:text-sm uppercase tracking-widest">About</a>
+              <a href="#contact" className="nav-link text-xs sm:text-sm uppercase tracking-widest">Contact</a>
+            </div>
+          </div>
+        </nav>
+      </header>
 
+      <div ref={scrollContainerRef} className="scroll-container">
+        <section className="section-height flex items-center justify-center bg-gray-50 relative overflow-hidden">
+          <div className="glowing">
+            <span style={{"--i": 1} as React.CSSProperties}></span>
+            <span style={{"--i": 2} as React.CSSProperties}></span>
+            <span style={{"--i": 3} as React.CSSProperties}></span>
+          </div>
+          <div className="glowing">
+            <span style={{"--i": 1} as React.CSSProperties}></span>
+            <span style={{"--i": 2} as React.CSSProperties}></span>
+            <span style={{"--i": 3} as React.CSSProperties}></span>
+          </div>
+          <div className="glowing">
+            <span style={{"--i": 1} as React.CSSProperties}></span>
+            <span style={{"--i": 2} as React.CSSProperties}></span>
+            <span style={{"--i": 3} as React.CSSProperties}></span>
+          </div>
+          <div className="glowing">
+            <span style={{"--i": 1} as React.CSSProperties}></span>
+            <span style={{"--i": 2} as React.CSSProperties}></span>
+            <span style={{"--i": 3} as React.CSSProperties}></span>
+          </div>
+          
+          <div className="container mx-auto px-2 sm:px-4 max-w-[2000px] relative z-10">
+            <div className="max-w-3xl mx-auto text-center">
+              <div className={`role-container h-8 mb-3 sm:mb-6 hero-element ${isLoaded ? 'loaded' : ''}`}>
+                <p className="text-lg sm:text-xl role-text">{roles[currentRole]}</p>
+              </div>
+              <h1 className={`text-5xl sm:text-7xl lg:text-[8rem] font-bold leading-none mb-3 sm:mb-4 hero-element ${isLoaded ? 'loaded' : ''}`}>
+                <span className="text-stroke">DANILO</span>
+                <br />
+                VINAS
+              </h1>
+              <div className={`developer-scene mb-6 sm:mb-8 relative hero-element ${isLoaded ? 'loaded' : ''}`}>
+                <div className="computer">
+                  <div className="screen-content">
+                    <div className="tech-stack-slideshow">
+                      <img 
+                        src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" 
+                        alt="React"
+                        className="tech-logo"
+                      />
+                      <img 
+                        src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" 
+                        alt="TypeScript"
+                        className="tech-logo"
+                      />
+                      <img 
+                        src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" 
+                        alt="Tailwind CSS"
+                        className="tech-logo"
+                      />
+                      <img 
+                        src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" 
+                        alt="Node.js"
+                        className="tech-logo"
+                      />
+                      <img 
+                        src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Git_icon.svg" 
+                        alt="Git"
+                        className="tech-logo"
+                      />
+                      <img 
+                        src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" 
+                        alt="Figma"
+                        className="tech-logo"
+                      />
+                    </div>
+                    <div className="screen-reflection"></div>
+                  </div>
+                </div>
+                <div className={`absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3 sm:space-x-4 hero-element ${isLoaded ? 'loaded' : ''}`}>
+                  <a href="mailto:contact@example.com" className="social-link">
+                    <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
+                  </a>
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="social-link">
+                    <Github className="w-4 h-4 sm:w-5 sm:h-5" />
+                  </a>
+                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-link">
+                    <Linkedin className="w-4 h-4 sm:w-5 sm:h-5" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 };
 export default App;
