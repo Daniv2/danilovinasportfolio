@@ -53,3 +53,39 @@ button:hover .nav-text-stroke {
   animation: floatScene 6s ease-in-out infinite;
   transform-origin: left center;
 }
+@media (min-width: 640px) {
+  .developer-scene {
+    width: 400px;
+    height: 180px;
+  }
+}
+
+@keyframes floatScene {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+.computer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 240px;
+  height: 100px;
+  background: #1a1a1a;
+  border-radius: 8px;
+  border: 2px solid #333;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 640px) {
+  .computer {
+    width: 320px;
+    height: 120px;
+  }
+}
