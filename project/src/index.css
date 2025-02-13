@@ -432,3 +432,13 @@ button:hover .nav-text-stroke {
   bottom: calc(80px * var(--i));
   right: calc(80px * var(--i));
 }
+.glowing span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -8px;
+  width: 15px;
+  height: 15px;
+  background: #f00;
+  border-radius: 50%;
+}
