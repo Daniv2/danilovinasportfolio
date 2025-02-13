@@ -360,3 +360,54 @@ button:hover .nav-text-stroke {
   margin: 0 auto;
   text-align: center;
 }
+@media (min-width: 640px) {
+  .chromatica-text {
+    max-width: 800px;
+    padding: 0;
+  }
+}
+
+.chromatica-line {
+  display: block;
+  color: black;
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.tilt-l {
+  transform: rotate(-2deg);
+}
+
+.tilt-r {
+  transform: rotate(2deg);
+}
+
+.tilt-l2x {
+  transform: rotate(-4deg);
+}
+
+.tilt-r2x {
+  transform: rotate(4deg);
+}
+.about-name {
+  -webkit-text-stroke: 1px black;
+  color: transparent;
+  transition: color 0.3s ease;
+}
+
+.about-name:hover {
+  color: black;
+  -webkit-text-stroke: 0;
+}
+
+.glowing {
+  position: relative;
+  transform-origin: right;
+  animation: colorChange 5s linear infinite;
+  opacity: 0.3;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
