@@ -89,3 +89,44 @@ button:hover .nav-text-stroke {
     height: 120px;
   }
 }
+
+.screen-content {
+  position: absolute;
+  inset: 2px;
+  background: linear-gradient(180deg, #000 0%, #111 100%);
+  border-radius: 6px;
+  overflow: hidden;
+  backdrop-filter: blur(1px);
+}
+
+.screen-reflection {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 3;
+  backdrop-filter: blur(0.5px);
+}
+
+.screen-reflection::before {
+  content: '';
+  position: absolute;
+  inset: -50%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.08),
+    transparent
+  );
+  animation: moveReflection 5s linear infinite;
+  transform: rotate(25deg);
+  filter: blur(1px);
+}
+
+@keyframes moveReflection {
+  from {
+    transform: translateX(-100%) rotate(25deg);
+  }
+  to {
+    transform: translateX(100%) rotate(25deg);
+  }
+}
